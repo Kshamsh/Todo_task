@@ -1,0 +1,57 @@
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 60px;
+    border: 1px solid rgba(192, 192, 192, 0.589);
+    border-bottom:none ;
+    margin-top: 10px;
+}
+.todo-list{
+    max-width: 454px;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    max-width: 424px;
+    padding: 10px;
+    height: auto;
+    border: 1px solid rgba(192, 192, 192, 0.589);
+    border-bottom:none ;
+    &.complete-task{
+        text-decoration: line-through;
+        color: silver;
+    }
+}
+.li-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-content{
+    max-width: 352px;
+    overflow-wrap: break-word;
+}
+.icon{
+    height: 40px;
+    color: $ICONS-COLOR;
+}
+.icon-check{
+    height: 30px;
+    width: 40px ;
+    color: $ICONS-COLOR;
+    padding-right: 12px;
+    &.checked{
+        color: rgba(0, 128, 0, 0.685);
+    }
+}
+.remove-icon{
+    height: 20px;
+    color: $ICONS-COLOR;   
+}
+.remove-icon:hover{
+    color: rgba(141, 2, 2, 0.685);
+}
