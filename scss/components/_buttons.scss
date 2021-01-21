@@ -1,0 +1,9 @@
+.all ,.active ,.completed ,.clear-checked{
+    border-radius: 2px;
+    border: 1px solid rgba(175, 47, 47, 0.2);
+    
+}
+.all:hover ,.active:hover ,.completed:hover ,.clear-checked:hover {
+    border-radius: 2px;
+    border: 1px solid rgba(175, 47, 47, 0.425);
+}
