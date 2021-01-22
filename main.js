@@ -117,10 +117,19 @@ function addTodo(e) {
     const arr = Array.from(todoList.children);
     if(event.target.classList.contains("icon")){
       event.target.classList.toggle("check-all-icon")
-      arr.forEach((element) => element.classList.toggle("complete-task"))
-      arr.forEach((element) => element.classList.toggle("active-task"))
-      arr.forEach((element) => element.firstElementChild.firstElementChild.classList.toggle("checked"))
-      
+      if(event.target.classList.contains("check-all-icon")){
+        arr.forEach((element) => {
+          element.classList.add("complete-task")
+          element.classList.remove("active-task")
+          element.firstElementChild.firstElementChild.classList.add("checked")
+      })
+      }else{
+        arr.forEach((element) => { 
+          element.classList.remove("complete-task")
+          element.classList.add("active-task")
+          element.firstElementChild.firstElementChild.classList.remove("checked")
+      })
+    }
       let a = document.getElementsByClassName("complete-task");
       let b = document.getElementsByClassName("task");
       i = b.length - a.length;
