@@ -5,12 +5,19 @@ const all = document.querySelector(".all");
 const display = document.querySelector(".display");
 const clearCompleted = document.querySelector(".clear-checked");
 const footer = document.querySelector(".hide");
+const allCheck =document.querySelector(".icon")
+
 let i = 0;
+const arr = Array.from(todoList.children);
+let a = document.getElementsByClassName("complete-task");
+let b = document.getElementsByClassName("task");
+     
 form.addEventListener("submit", addTodo);
 form.addEventListener("click", checkAll)
 todoList.addEventListener("click", removeAndCompleteTask);
 display.addEventListener("click", filterButtons);
 clearCompleted.addEventListener("click", removeCompletedTasks);
+
 function addTodo(e) {
     e.preventDefault();
     const inputValue = form.addinput.value;
@@ -39,7 +46,12 @@ function addTodo(e) {
     if (event.target.classList.contains("remove-icon")) {
       event.target.closest("li").remove();
       i--;
+      
+      let a = document.getElementsByClassName("complete-task");
+      let b = document.getElementsByClassName("task");
+      i = b.length - a.length;
       total.textContent = i;
+      
       if (!document.getElementsByClassName("task").length) {
         footer.classList.remove("show");
       }
@@ -49,6 +61,7 @@ function addTodo(e) {
       event.target.classList.toggle("checked");
       event.target.closest("li").classList.toggle("complete-task");
       event.target.closest("li").classList.toggle("active-task");
+      
       let a = document.getElementsByClassName("complete-task");
       let b = document.getElementsByClassName("task");
       i = b.length - a.length;
@@ -96,6 +109,9 @@ function addTodo(e) {
       footer.classList.remove("show");
       total.textContent = 0;
     }
+    if(!arr.length){
+      allCheck.classList.remove("check-all-icon")
+    }
   }
   function checkAll(event){
     const arr = Array.from(todoList.children);
@@ -104,6 +120,12 @@ function addTodo(e) {
       arr.forEach((element) => element.classList.toggle("complete-task"))
       arr.forEach((element) => element.classList.toggle("active-task"))
       arr.forEach((element) => element.firstElementChild.firstElementChild.classList.toggle("checked"))
+      
+      let a = document.getElementsByClassName("complete-task");
+      let b = document.getElementsByClassName("task");
+      i = b.length - a.length;
+      total.textContent = i;
     }
   }
+  i = b.length - a.length;
   total.textContent = i;
