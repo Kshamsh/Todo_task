@@ -32,12 +32,15 @@ li{
     justify-content: space-between;
 }
 .text-content{
-    max-width: 352px;
+    width: 352px;
     overflow-wrap: break-word;
 }
 .icon{
     height: 40px;
     color: $ICONS-COLOR;
+}
+.check-all-icon{
+    color: gray;
 }
 .icon-check{
     height: 30px;

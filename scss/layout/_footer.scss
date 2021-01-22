@@ -1,4 +1,7 @@
-footer{
+.hide {
+    display: none;
+  }
+.show{
     display: flex;
     justify-content: space-between;
     width: 424px;

@@ -100,12 +100,15 @@ li {
   justify-content: space-between; }
 
 .text-content {
-  max-width: 352px;
+  width: 352px;
   overflow-wrap: break-word; }
 
 .icon {
   height: 40px;
   color: #e6e6e6; }
+
+.check-all-icon {
+  color: gray; }
 
 .icon-check {
   height: 30px;
@@ -122,7 +125,10 @@ li {
 .remove-icon:hover {
   color: rgba(141, 2, 2, 0.685); }
 
-footer {
+.hide {
+  display: none; }
+
+.show {
   display: flex;
   justify-content: space-between;
   width: 424px;
